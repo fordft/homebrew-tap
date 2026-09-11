@@ -5,26 +5,30 @@ class SuiAi < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/fordft/sui/releases/download/v0.3.0/sui-aarch64-apple-darwin.tar.xz"
+      sha256 "9730e1a4aa71ee36e14be99814570db28b4a36acf4040c0875bd7f4cc4020bc7"
     end
     if Hardware::CPU.intel?
       url "https://github.com/fordft/sui/releases/download/v0.3.0/sui-x86_64-apple-darwin.tar.xz"
+      sha256 "669bf6b168419b5251fec0d36f1557639a79f402daaea6ccbef95675e2696695"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/fordft/sui/releases/download/v0.3.0/sui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b7c7a727ecf23c2cfdbcd2e8bb67f2fd68cc9e90102023f644573921e2a150f8"
     end
     if Hardware::CPU.intel?
       url "https://github.com/fordft/sui/releases/download/v0.3.0/sui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "df4d0cddda1a98b96bbdd6b5dd70b8d475f2c7092bdcfc7a1c27f1030199a1ea"
     end
   end
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
+    "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "x86_64-apple-darwin":       {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
