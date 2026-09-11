@@ -1,25 +1,25 @@
 class SuiAi < Formula
   desc "cache-first multi-agent coding harness"
   homepage "https://github.com/fordft/sui"
-  version "0.3.4"
+  version "0.3.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fordft/sui/releases/download/v0.3.4/sui-aarch64-apple-darwin.tar.xz"
-      sha256 "ada5af1311719061e2ba38a9319f3cc69ac44cb1144dee504934abab5e641ce3"
+      url "https://github.com/fordft/sui/releases/download/v0.3.5/sui-aarch64-apple-darwin.tar.xz"
+      sha256 "ca3826977a24e22eedca3c487176cf477125511ead4415997fa9ceef1d9cc2a4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fordft/sui/releases/download/v0.3.4/sui-x86_64-apple-darwin.tar.xz"
-      sha256 "a217deb4da3140848f567e7259b101f3f5d17277e16d1ee9bea5f5af76f55e87"
+      url "https://github.com/fordft/sui/releases/download/v0.3.5/sui-x86_64-apple-darwin.tar.xz"
+      sha256 "4f2059d0134c620b2cf6c2898fe0f5bf76bfb204633d432b117fc06f05467c31"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fordft/sui/releases/download/v0.3.4/sui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a96fc8289bc83f26a1a7a5430f96e300f285afef4abc838dddf2d4abda55ec04"
+      url "https://github.com/fordft/sui/releases/download/v0.3.5/sui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1c364e9ba399a3b74b2fbf5075f8bb5181920c7faf423ff107a0e8c5d3359a0b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fordft/sui/releases/download/v0.3.4/sui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b70fcaf9091e07a8871d99ee82fa636a29cf2bd4b04b0a3dbae992c77a664320"
+      url "https://github.com/fordft/sui/releases/download/v0.3.5/sui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "130b8d67e22e4652028094265635190dab5988db65af3f3c150e68540fd638a4"
     end
   end
 
